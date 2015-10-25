@@ -1,10 +1,15 @@
 <?php
 session_start();
-if (http_authenticate($_POST['user'], $_POST['passwd'])) {
+
+$oun = $_POST['user'];
+$opw = $_POST['passwd'];
+
+if (($oun=='admin') AND (($opw=='PASSWORD1') OR ($opw=='PASSWORD2'))) {
     print "Login succeeded.";
     $_SESSION['loggedin'] = true;
 } else {
     print "Sorry, login failed.";
+die;
 }
 # print "<pre>"; print_r($_POST); print "</pre>";
 /**
