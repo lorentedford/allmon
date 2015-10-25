@@ -97,4 +97,19 @@ Match up the infromation to your asterisk installation then ctrl x to exit and s
 
 you might look at controlpanel.php and edit accordingly if needed..
 
+You need to make astdb.php +rwx so this is the command to do this
+chmod +rwx ./astdb.php
+
+generally i run it the first time manually by typing 
+./astdb.php
+
+if you ls -l 
+you should see a new txt file that the above command populated.
+
+I generally run this every 30 minutes in crontab -e
+Generally i use option 1 nano to edit files while in crontab -e
+it will look similar to this
+*/30 * * * * ./var/www/allmon/astdb.php
+
+#ctrl x to save
 hope this helps with the installation of allmon.
