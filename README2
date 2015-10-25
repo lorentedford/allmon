@@ -89,13 +89,11 @@ write = all,system,call,log,verbose,command,agent,user,config
 
 Now that we are back to commandline cd /var/www/allmon
 cp allmon.ini.txt allmon.ini.php
-cp controlpanel.txt controlpanel.php 
 
 Now edit allmon.ini.php
 nano allmon.ini.php
 Match up the infromation to your asterisk installation then ctrl x to exit and save
 
-you might look at controlpanel.php and edit accordingly if needed..
 
 You need to make astdb.php +rwx so this is the command to do this
 chmod +rwx ./astdb.php
